@@ -20,7 +20,7 @@ const fetchWrapper = (which:string):Promise<fetch> =>  fetch( `http://localhost:
 // const fetchWrapper = (which:string):Promise<fetch> =>  fetch( `http://localhost:8000/api/${which}/`);
 
 function* fetchSaga(action): Saga {
-    // () => {console.log(action.data)};
+    () => {console.log(action.data)};
     try {
         
         const whichRaw = yield call(fetchWrapper, action.data);

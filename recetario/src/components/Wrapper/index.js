@@ -20,23 +20,23 @@ const mapStateToProps = (state) => ({ingredientes: state});
 const mapDispatchToProps = (dispatch) => ({
     actions: bindActionCreators(actions, dispatch)
 });
-const RouterWrapper = withRouter(
-    connect(
-        mapStateToProps,
-        mapDispatchToProps
-    )(MyRouter)
-);
+const RouterWrapper = 
+    connect(mapStateToProps,mapDispatchToProps)(Ingredients)
+;
 const history = createBrowserHistory()
-const Wrapper = () => {
-    return (
-        <Provider store={store}>
-            <ConnectedRouter  history={this.history} >
-                <RouterWrapper>
+class Wrapper extends React.Component {
+    render(){
 
-                </RouterWrapper>
-            </ConnectedRouter>
-        </Provider>
-    )
+        return (
+            <Provider store={store}>
+                <ConnectedRouter  history={this.history} >
+                    {/* <RouterWrapper>
+                        
+                    </RouterWrapper> */}
+                </ConnectedRouter>
+            </Provider>
+        )
+    }
 };
 
 export default Wrapper;
