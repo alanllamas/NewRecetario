@@ -7,6 +7,7 @@ import * as actions from '../../actions.js'
 
 import {ConnectedRouter} from 'react-router-redux';
 import {withRouter} from 'react-router-dom';
+import createBrowserHistory from 'history/createBrowserHistory'
 // import {history} from 'Helpers/router';
 
 import store from '../../store';
@@ -19,15 +20,17 @@ const mapStateToProps = (state) => ({ingredientes: state});
 const mapDispatchToProps = (dispatch) => ({
     actions: bindActionCreators(actions, dispatch)
 });
-const RouterWrapper = withRouter(connect(
+const RouterWrapper = withRouter(
+    connect(
         mapStateToProps,
         mapDispatchToProps
-)(MyRouter));
-
+    )(MyRouter)
+);
+const history = createBrowserHistory()
 const Wrapper = () => {
     return (
         <Provider store={store}>
-            <ConnectedRouter>
+            <ConnectedRouter  history={this.history} >
                 <RouterWrapper>
 
                 </RouterWrapper>

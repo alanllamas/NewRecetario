@@ -4,16 +4,16 @@ import './styles.css';
 import { Grid, Row, Col } from 'react-bootstrap';
 // import * as actions from '../../actions.js'
 import Ingredient from '../Ingredient';
-import store from '../../store';
+
 
 
 
 
 class Ingredients extends Component<{}, void> {
-    ingredientsList : Array<{}>;
+    // ingredientsList : Array<{}>;
     fetchIngredients = () => {
-        this.props.fetch('products');   
-        console.log(this.props.fetch('products'));     
+        // this.props.fetch('products');   
+        // console.log(this.props.fetch('products'));     
     };
 
     
@@ -24,7 +24,7 @@ class Ingredients extends Component<{}, void> {
         return(
            
             <div className="ingredientes">
-                {
+                {/* {
                     this.props.ingredients.map((x) => {
                         return (
                             <div className="ingrediente">
@@ -32,7 +32,7 @@ class Ingredients extends Component<{}, void> {
                             </div>
                         )
                     })
-                }
+                } */}
             </div>
            
         )

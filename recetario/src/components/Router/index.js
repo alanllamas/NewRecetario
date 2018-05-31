@@ -5,43 +5,43 @@ import {
     Redirect,
     Switch,
     Link,
-    Router,
+    BrowserRouter as Router,
 } from 'react-router-dom';
 import Wrapper from '../Wrapper';
 import Ingredients from '../Ingredients';
 import Suppliers from '../Supplier';
 import App from '../App';
-import createBrowserHistory from 'history/createBrowserHistory'
 
-const history = createBrowserHistory()
+
+
 
 
 
 
 const MyRouter = (props) => {
-    const {
-        actions : {
-            fetch
-        },
-        ingrediente,
-    } = props;
-    const history = createBrowserHistory();
+    // const {
+    //     actions : {
+    //         fetch
+    //     },
+    //     ingrediente,
+    // } = props;
+
     return (
-        <React.Fragment>
-            <Router history={this.history} >
-                <Link path="/ingredientes">Ingredientes</Link>
-                <Link path="/proveedores">Proveedores</Link>
-                <Switch>
-                        <Redirect from="/" to="/ingredientes" />
-                        <Route path="/ingredientes" render={(props) => (<Ingredients props={props}/>) }/>
-                        <Route path="/proveedores" exact={true} component={Suppliers}/>
-                </Switch>
-            </Router>
-        </React.Fragment>
+        <Router >
+            <React.Fragment>
+                {/* <Link path="/ingredientes">Ingredientes</Link>
+                <Link path="/proveedores">Proveedores</Link> */}
+                {/* <Switch>  */}
+                    <Route path="/" exact={true} render={(props) => (<App props={props}/>) }/>
+                    <Route path="/ingredientes" render={(props) => (<Ingredients props={props}/>) }/>
+                    <Route path="/proveedores" render={(props) => (<Suppliers props={props}/>) }/>
+                {/* </Switch> */}
+            </React.Fragment>
+        </Router>
     )
     
 }
-export default MyRouter
+export default MyRouter;
 {/* <BrowserRouter> */}
 
     {/* <div>   
