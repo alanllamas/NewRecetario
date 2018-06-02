@@ -10,11 +10,11 @@ import mySaga from './saga.js'
 import apiCall from './reducers/api.js'
 
 // const reducer = combineReducers({ apiCall});
-const reducer = apiCall;
+// const reducer = apiCall;
 
 const sagaMiddleware = createSagaMiddleware();
 const store = createStore(
-    reducer,
+    apiCall,
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
     applyMiddleware(sagaMiddleware),
 );

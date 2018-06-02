@@ -3,7 +3,7 @@ import * as React from 'react';
 //     CardTitle, CardSubtitle, Button 
 // } from 'reactstrap';
 import './style.css'
-import {  Col } from 'react-bootstrap';
+
 
 const Ingredient = ({name, quantity, meassure, price, provider, category, image}) => {
     console.log(name);
@@ -13,7 +13,7 @@ const Ingredient = ({name, quantity, meassure, price, provider, category, image}
 
         
             <div>
-                <img className="card-img" top width="100%" src={image} alt="Card image cap" />
+                <img className="card-img" top width="100%" src={image} alt={name} />
                 <div className="card-body">
                     <h2>{name} {quantity}{meassure}</h2>
                     <h3>Precio : ${price}</h3>
