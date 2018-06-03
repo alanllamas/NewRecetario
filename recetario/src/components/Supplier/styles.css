@@ -1,0 +1,6 @@
+.supplier-container{
+    padding-top: 110px;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: space-around;
+}

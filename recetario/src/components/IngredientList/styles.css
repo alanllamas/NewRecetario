@@ -1,0 +1,23 @@
+
+.ing-list p{
+    border-bottom: 2px solid black;
+    padding: 2% 6%;
+    position: relative;
+}
+.ing-list, .ing-item{
+    width: 20%;
+    padding:.01% 3%;
+    background: white;
+}
+.ing-list{
+    max-height: 150px !important;
+    overflow: scroll;
+}
+.hidden {
+    display: none;
+}
+button{
+    max-height: 50px;
+    background: #FF5252;
+    color: white;
+}

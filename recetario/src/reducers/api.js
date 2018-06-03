@@ -13,4 +13,15 @@ const apiCall= (state = [], action) => {
     }
 };
 
+// const createRecepie = (state = [], action) => {
+//     switch ( action.type ) {
+//         case POST_SUCCESS:
+//             return state = 'SUCCESS';
+//         case POST_SUCCESS:
+//             return state = 'ERROR';
+//         default:
+//             return state;
+//     }
+// }
+
 export default apiCall;

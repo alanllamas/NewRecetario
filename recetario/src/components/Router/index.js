@@ -2,7 +2,6 @@ import * as React from 'react';
 
 import {
     Route,
-    // Redirect,
     Switch,
     NavLink,
     BrowserRouter as Router,
@@ -11,6 +10,8 @@ import {
 import Ingredients from '../Ingredients';
 import Suppliers from '../Supplier';
 import App from '../App';
+import NewRecepie from '../NewRecepie';
+import Menu from '../Menu';
 
 
 
@@ -20,14 +21,14 @@ const MyRouter = ({...store, actions, ...props}) => {
     return (
         <Router>
             <React.Fragment>
-                <ul>
-                    <li><NavLink to="/ingredientes">Ingredientes</NavLink></li>
-                    <li><NavLink to="/proveedores">Proveedores</NavLink></li>
-                </ul>
+                <Menu/>
                 <Switch> 
+
                     <Route path="/" exact={true} render={(props) => (<App {...props}/>) }/>
                     <Route path="/ingredientes" render={(props) => (<Ingredients {...props} {...data} fetch={actions.fetch}/>)}/>
+                    <Route path="/crear-receta" render={(props) => (<NewRecepie {...props} {...data} fetch={actions.fetch}/>)}/>
                     <Route path="/proveedores" render={(props) => (<Suppliers {...props}/>) }/>
+                    
                 </Switch>
             </React.Fragment>
         </Router>
