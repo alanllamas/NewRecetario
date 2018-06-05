@@ -1,0 +1,24 @@
+table{
+    width: 60%;
+}
+thead{
+    background: #2196F3;
+    color: white;
+}
+tr:nth-child(even) {
+    background: #BBDEFB;
+}
+td{
+    text-align: center;
+}
+.button{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+
+}
+.save{
+    margin-right: 7vw;
+  background: #4CAF50;
+    
+}

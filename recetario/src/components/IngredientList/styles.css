@@ -7,17 +7,28 @@
 .ing-list, .ing-item{
     width: 20%;
     padding:.01% 3%;
-    background: white;
+    /* background: white; */
+    background: #EEE;
 }
 .ing-list{
-    max-height: 150px !important;
+    max-height: 200px !important;
     overflow: scroll;
+    margin-top: 12%;
+    z-index: 999;
+}
+.ing-list::-webkit-scrollbar { 
+    display: none; 
 }
 .hidden {
     display: none;
 }
+input{
+    height: 50px;
+    font-size: 1.7rem;
+    text-align: center;
+}
 button{
-    max-height: 50px;
+    height: 50px;
     background: #FF5252;
     color: white;
 }

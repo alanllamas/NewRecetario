@@ -9,15 +9,13 @@ import Ingredient from '../Ingredient';
 
 
 class Ingredients extends Component<{}, void> {
+    
     fetchIngredients = () => {
 
-        
         this.props.fetch('products');   
     
     };
 
-
-    
     componentWillMount() {
         
         this.fetchIngredients();
@@ -27,7 +25,6 @@ class Ingredients extends Component<{}, void> {
         return(
             <React.Fragment>
             <div className="ingredientes">
-
                 {
                     this.props.ingredientes.map((x) => {
                         return (

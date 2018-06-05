@@ -17,7 +17,7 @@ import * as actions from '../../actions.js'
 
 
 
-const mapStateToProps = (state) => ({ingredientes: state});
+const mapStateToProps = (state) => (state);
 const mapDispatchToProps = (dispatch) => ({
     actions: bindActionCreators(actions, dispatch)
 });

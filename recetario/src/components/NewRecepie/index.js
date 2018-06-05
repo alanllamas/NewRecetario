@@ -3,55 +3,32 @@ import { Component } from 'react';
 import './styles.css';
 
 import IngredientList from '../IngredientList';
+import Recepie from '../Recepie';
 class NewRecepie extends Component<{}, void> {
-    constructor(){
-        super();
-        this.state = {
-            ingRecepie: [],
 
-        }
-    }
     fetchIngredients = () => {
 
         this.props.fetch('products');   
     
     };
     
-    componentWillMount() {
+    componentDidMount() {
         
         this.fetchIngredients();
-
+        
     }
     render(): React.Element<'div'> {
         return(
+            <React.Fragment>
             <div className="addIngredient">
-                <IngredientList state={{...this.state}} ingredientes={this.props.ingredientes} />
-                {/* <div>
-            {
-                this.props.ingredientes.map((x) => {
-                    return ( 
-
-                    )
-                })
-            }
-          
-        </div> */}
+                <IngredientList {...this.state} putIng={this.props.putIng} ingredientes={this.props.ingredientes} ingredientsInRecepie={this.props.ingredientsInRecepie}/>
                 
             </div>
-            // <div className="ingredientes">
+            <div>
+                <Recepie {...this.state} ingredientsInRecepie={this.props.ingredientsInRecepie} quitIng={this.props.quitIng}/>
+            </div>
+            </React.Fragment>
 
-            //     {
-            //         this.props.ingredientes.map((x) => {
-            //             return (
-            //                 <div className="ingrediente" key={x.id}>
-            //                     <Ingredient className="ingrediente"  { ...x} />
-            //                 </div>
-            //             )
-            //         })
-            //     }
-            // </div>
-            // <React.Fragment>
-            // </React.Fragment>
            
         )
     }

@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "flow": "^0.2.3",
+    "flow-bin": "^0.73.0",
     "history": "^4.7.2",
     "react": "^16.4.0",
     "react-bootstrap": "^0.32.1",
